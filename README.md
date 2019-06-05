@@ -70,7 +70,7 @@ sudo apt-get update
 sudo apt-get install python3.6 python3.6-venv memcached redis-server
 ```
 
-1. Clone Coldfront in a new directory and create a Python virtual environment
+- Clone Coldfront in a new directory and create a Python virtual environment
    for Coldfront
 
 ```bash
@@ -80,7 +80,7 @@ git clone https://github.com/ubccr/coldfront.git
 python3.6 -mvenv venv
 ```
 
-1. Activate the virtual environment and install the required Python packages
+- Activate the virtual environment and install the required Python packages
 
 ```bash
 source venv/bin/activate
@@ -89,7 +89,7 @@ pip install wheel
 pip install -r requirements.txt
 ```
 
-1. Copy `config/local_settings.py.sample` to `config/local_settings.py`.
+- Copy `config/local_settings.py.sample` to `config/local_settings.py`.
 
 ```bash
 cp config/local_settings.py.sample config/local_settings.py
@@ -102,33 +102,32 @@ Open `config/local_settings.py` and update the following:
 - Uncomment line `EMAIL_ADMIN_LIST`
 - Uncomment line `EMAIL_DIRECTOR_EMAIL_ADDRESS`
 
-1. Copy `config/local_strings.py.sample` to `config/local_strings.py` and
+- Copy `config/local_strings.py.sample` to `config/local_strings.py` and
    update if desired.
 
 ```bash
 cp config/local_strings.py.sample config/local_strings.py
 ```
 
-1. Run initial setup
+- Run initial setup
 
 ```bash
 python manage.py initial_setup
 ```
 
-1. Optional: Add some test data
+- Optional: Add some test data
 
 ```bash
 python manage.py load_test_data
 ```
 
-1. Start development server
+- Start development server
 
 ```bash
 python manage.py runserver 0.0.0.0:8000
 ```
 
-1. Point your browser to [http://localhost:8000](http://localhost:8000)
-
+- Point your browser to [http://localhost:8000](http://localhost:8000)
 - You can log in as `admin` with password `test1234`.
 - You can log in as a PI using username `cgray` with password `test1234`.
 - You can log in as another PI using username `sfoster` with password `test1234`.
